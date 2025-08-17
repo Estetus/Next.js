@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+}
+
+.s {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.m {
+  margin-top: 12px;
+}
+
+.text svg{
+  margin-right: 4px;
+  margin-left: 6px;
+}

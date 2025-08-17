@@ -1,0 +1,30 @@
+.h1 {
+  margin: 0;
+
+  font-size: 34px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 100%;
+  color: var(--black-text);
+}
+
+.h2 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 100%;
+  color: var(--black-title);
+}
+
+.h3 {
+  margin: 0;
+  margin-bottom: 6px;
+
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 100%;
+  color: var(--black-title);
+}

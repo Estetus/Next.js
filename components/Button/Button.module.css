@@ -1,0 +1,33 @@
+.button {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  width: auto;
+}
+
+.blue {
+  justify-content: space-between;
+  
+  width: 76px;
+  border: none;
+
+  color: var(--blue);
+
+
+  background: none;
+}
+
+.blue:hover {
+  color: var(--blue-hover);
+} 
+
+.blackbutton {
+  min-width: 229px;
+  padding: 14px 44px;
+  border-radius: 8px;
+
+  color: var(--background);
+
+  background-color: var(--blackbutton);
+
+} 

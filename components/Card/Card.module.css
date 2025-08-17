@@ -1,0 +1,9 @@
+.divblock {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  max-width: 350px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+}
