@@ -22,7 +22,7 @@ export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Ele
         </div>
       )}
       {children}
-      <Like> 4</Like >
+      <Like size='s'> 4</Like >
     </div>
   );
 }; 

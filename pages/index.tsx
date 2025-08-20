@@ -6,6 +6,7 @@ import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 
 import type { JSX } from 'react';
+import { Like } from '@/components/Like/Like';
 
 export default function Home(): JSX.Element {
   return (
@@ -22,6 +23,7 @@ export default function Home(): JSX.Element {
           Читать
         </Button>
       </Card>
+      <Like size="m" />
     </>
   );
 }
