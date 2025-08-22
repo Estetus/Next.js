@@ -1,7 +1,7 @@
-import type { JSX } from 'react';
+import { type JSX } from 'react';
+import { type ParagraphProps } from './Paragraph.props';
 import styles from './Paragraph.module.css';
 import cn from 'classnames';
-import type { ParagraphProps } from './Paragraph.props';
 
 export const Paragraph = ({size = 's', children, className, ...props}: ParagraphProps): JSX.Element => {
   return (

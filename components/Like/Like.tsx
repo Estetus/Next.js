@@ -1,7 +1,7 @@
-import type { JSX } from 'react';
-import styles from './Like.module.css';
+import { type JSX } from 'react';
 import LikeIcon from './like.svg';
-import type { LikeProps } from './Like.props';
+import { type LikeProps } from './Like.props';
+import styles from './Like.module.css';
 
 export const Like = ({ children }: LikeProps): JSX.Element => {
  return (
