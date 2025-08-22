@@ -1,10 +1,10 @@
-import type { JSX } from 'react';
-import cn from 'classnames';
+import { type JSX } from 'react';
+import { type BreadCrumbsProps } from './BreadCrumbs.props';
+import { Like } from '../Like';
+import { TimeTag } from '../TimeTag';
 import DotIcon from './dot.svg';
 import styles from './BreadCrumbs.module.css';
-import type { BreadCrumbsProps } from './BreadCrumbs.props';
-import { Like } from '../Like/Like';
-import { TimeTag } from '../TimeTag/TimeTag';
+import cn from 'classnames';
 
 export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Element => {
   return (
