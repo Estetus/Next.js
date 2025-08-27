@@ -6,8 +6,11 @@ import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { type JSX } from 'react';
 import { Like } from '@/components/Like/Like';
 import { TimeTag } from '@/components/TimeTag';
+import { withLayout } from '@/Layout/HOCLayout';
 
-export default function Home(): JSX.Element {
+
+
+function Home(): JSX.Element {
   return (
     <>
       <Card>
@@ -26,3 +29,6 @@ export default function Home(): JSX.Element {
     </>
   );
 }
+
+
+export default withLayout(Home);
