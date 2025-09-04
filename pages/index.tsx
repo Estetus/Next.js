@@ -25,7 +25,31 @@ function Home(): JSX.Element {
           Читать
         </Button>
       </Card>
-      <Like size="m" />
+       <Card>
+        <BreadCrumbs />
+        <Htag tag="h3">Как работать с CSS Grid</Htag>
+        <Paragraph size="s">
+          Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему
+          сеток в CSS. Гриды подойдут и для верстки основных областей страницы..
+        </Paragraph>
+        <TimeTag>3 минуты</TimeTag>
+        <Button appearance="blue" className="buttonref">
+          Читать
+        </Button>
+      </Card>
+       <Card>
+        <BreadCrumbs />
+        <Htag tag="h3">Как работать с CSS Grid</Htag>
+        <Paragraph size="s">
+          Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему
+          сеток в CSS. Гриды подойдут и для верстки основных областей страницы..
+        </Paragraph>
+        <TimeTag>3 минуты</TimeTag>
+        <Button appearance="blue" className="buttonref">
+          Читать
+        </Button>
+      </Card>
+      {/* <Like size="m" /> */}
     </>
   );
 }
