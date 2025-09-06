@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  max-width: 350px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
