@@ -1,4 +1,4 @@
-import { type  JSX } from 'react';
+import { type JSX } from 'react';
 import { type HtagProps } from './Htag.props';
 import styles from './Htag.module.css';
 

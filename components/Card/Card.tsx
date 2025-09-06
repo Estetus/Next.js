@@ -1,6 +1,6 @@
 import { type JSX } from 'react';
-import Picture from './picture.svg';
 import { type CardProps } from './Card.props';
+import Picture from './picture.svg';
 import styles from './Card.module.css';
 
 

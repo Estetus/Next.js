@@ -6,6 +6,7 @@ import DotIcon from './dot.svg';
 import cn from 'classnames';
 import styles from './BreadCrumbs.module.css';
 
+
 export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Element => {
   return (
     <div
@@ -22,7 +23,7 @@ export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Ele
         </div>
       )}
       {children}
-      <Like> 4</Like >
+      <Like size='s'> 4</Like >
     </div>
   );
 }; 

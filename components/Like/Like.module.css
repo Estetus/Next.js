@@ -1,5 +1,46 @@
 .like {
-  cursor: pointer;
   display: flex;
   align-items: center;
 }
+
+.button {
+  border: none;
+  background: none;
+}
+
+
+
+.likebutton {
+  cursor: pointer;
+
+  width: 48px;
+  height: 48px;
+  padding: 15px;
+  border: 1px solid var(--blackbutton);
+  border-radius: 40px;
+
+  background: none;
+
+  transition: all .3s ease-in-out;
+}
+
+.liked {
+  background: var(--blackbutton);
+}
+
+.liked svg path {
+  stroke: var(--background);
+}
+
+.likebutton:hover {
+  background: var(--blackbutton);
+  transition: all .3s ease-in-out;
+}
+
+.likebutton:hover svg path {
+  stroke: var(--background);
+  transition: all .3s ease-in-out;
+}
+
+
+

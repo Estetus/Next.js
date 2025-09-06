@@ -5,6 +5,7 @@ import styles from './Button.module.css';
 import cn from 'classnames';
 
 export const Button = ({ appearance, children, className }: ButtonProps): JSX.Element => {
+
     switch(appearance) {
       case 'blue':
       return  <button className={cn(styles.button, styles.blue, className)}>
@@ -19,6 +20,5 @@ export const Button = ({ appearance, children, className }: ButtonProps): JSX.El
         return <></>;
     }
      
-
   };
 
