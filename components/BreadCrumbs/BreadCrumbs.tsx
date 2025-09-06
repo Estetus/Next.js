@@ -3,8 +3,9 @@ import { type BreadCrumbsProps } from './BreadCrumbs.props';
 import { Like } from '../Like';
 import { TimeTag } from '../TimeTag';
 import DotIcon from './dot.svg';
-import styles from './BreadCrumbs.module.css';
 import cn from 'classnames';
+import styles from './BreadCrumbs.module.css';
+
 
 export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Element => {
   return (

@@ -9,7 +9,6 @@ import { TimeTag } from '@/components/TimeTag';
 import { withLayout } from '@/Layout/HOCLayout';
 
 
-
 function Home(): JSX.Element {
   return (
     <>
@@ -21,6 +20,7 @@ function Home(): JSX.Element {
           сеток в CSS. Гриды подойдут и для верстки основных областей страницы..
         </Paragraph>
         <TimeTag>3 минуты</TimeTag>
+
         <Button appearance="blue" className="buttonref">
           Читать
         </Button>
