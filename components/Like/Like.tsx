@@ -6,6 +6,7 @@ import styles from './Like.module.css';
 import cn from 'classnames';
 import { useLikes } from './UserLike';
 
+
 export const Like = ({ children, size, isLiked= false, ...props }: LikeProps): JSX.Element => {
   const {liked, toggleLike} = useLikes({isLiked});
 

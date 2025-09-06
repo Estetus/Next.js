@@ -12,8 +12,8 @@ import axios from 'axios';
 import { type Post } from '@/interfaces/posts.interface';
 
 
-
 function Home({posts}: HomeProps): JSX.Element {
+
   return (
     <> 
       { posts.map((p) => (
@@ -31,6 +31,7 @@ function Home({posts}: HomeProps): JSX.Element {
           сеток в CSS. Гриды подойдут и для верстки основных областей страницы..
         </Paragraph>
         <TimeTag>3 минуты</TimeTag>
+
         <Button appearance="blue" className="buttonref">
           Читать
         </Button>
