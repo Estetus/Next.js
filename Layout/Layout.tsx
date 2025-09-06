@@ -5,12 +5,12 @@ import styles from './Layout.module.css';
 
 export const Layout = ( {children}: LayoutProps)  => {
 return (
-  <>
-  <Header/>
   <div className={styles.container}>
+  <Header className={styles.header}/>
+  <div className={styles.body}>
     {children}
   </div>
-  </>
+  </div>
 );
 };
 
