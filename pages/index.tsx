@@ -12,7 +12,7 @@ import axios from 'axios';
 import { type Post } from '@/interfaces/posts.interface';
 
 
-function Home({posts}: HomeProps): JSX.Element {
+function Home({posts, gitUrl}: HomeProps): JSX.Element {
 
   return (
     <> 
@@ -45,15 +45,16 @@ function Home({posts}: HomeProps): JSX.Element {
 export default withLayout(Home);
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const { data: posts } = await axios.get<Post[]>(`${process.env.NEXT_PUBLIC_DOMAIN  }/posts`
-  );
+   const { data: posts } = await axios.get<Post[]>(`${process.env.NEXT_PUBLIC_DOMAIN}/posts`)
   return {
     props: {
-      posts,
+      posts: posts.slice(0, 10),
+      gitUrl: 'https://github.com/Estetus/'
     },
   };
 };
 
 interface HomeProps extends Record<string, unknown> {
-  posts: Post[]
+  posts: Post[];
+  gitUrl: string;
 }
