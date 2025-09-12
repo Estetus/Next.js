@@ -6,12 +6,12 @@
   max-width: 350px;
   padding: 10px;
   border: 1px solid var(--color-border);
-
-  transition: all 0.3s ease-in-out;
   
+  transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
+  cursor: pointer;
   transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%);
 }
