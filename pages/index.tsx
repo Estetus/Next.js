@@ -1,15 +1,10 @@
-import { Button } from '@/components/Button/Button';
 import { Card } from '@/components/Card/Card';
-import { Htag } from '@/components/Htag/Htag';
-import { BreadCrumbs } from '@/components/BreadCrumbs/BreadCrumbs';
-import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { type JSX } from 'react';
-import { Like } from '@/components/Like/Like';
-import { TimeTag } from '@/components/TimeTag';
 import { withLayout } from '@/Layout/HOCLayout';
 import { type GetStaticProps } from 'next';
 import axios from 'axios';
 import { type Post } from '@/interfaces/posts.interface';
+import Link from 'next/link';
 
 
 function Home({posts, gitUrl}: HomeProps): JSX.Element {
@@ -17,26 +12,14 @@ function Home({posts, gitUrl}: HomeProps): JSX.Element {
   return (
     <> 
       { posts.map((p) => (
-        <Card key={p.id}>
+        <Link key={p.id} href={`/posts/${p.id}`}>
+        <Card >
           {p.title}
           {p.body}
         </Card>
+        </Link>
       ))
       }
-      {/* <Card>
-        <BreadCrumbs />
-        <Htag tag="h3">Как работать с CSS Grid</Htag>
-        <Paragraph size="s">
-          Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему
-          сеток в CSS. Гриды подойдут и для верстки основных областей страницы..
-        </Paragraph>
-        <TimeTag>3 минуты</TimeTag>
-
-        <Button appearance="blue" className="buttonref">
-          Читать
-        </Button>
-      </Card>
-      <Like size="m" /> */}
     </>
   );
 }
