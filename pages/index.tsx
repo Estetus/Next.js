@@ -13,7 +13,7 @@ function Home({posts, gitUrl}: HomeProps): JSX.Element {
     <> 
       { posts.map((p) => (
         <Link key={p.id} href={`/posts/${p.id}`}>
-        <Card >
+        <Card size='s'>
           {p.title}
           {p.body}
         </Card>
@@ -28,7 +28,8 @@ function Home({posts, gitUrl}: HomeProps): JSX.Element {
 export default withLayout(Home);
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-   const { data: posts } = await axios.get<Post[]>(`${process.env.NEXT_PUBLIC_DOMAIN}/posts`)
+   const { data: posts } = await axios.get<Post[]>(`${process.env.NEXT_PUBLIC_DOMAIN}/posts`);
+    
   return {
     props: {
       posts: posts.slice(0, 10),

@@ -3,7 +3,6 @@
   flex-direction: column;
 
   box-sizing: border-box;
-  max-width: 350px;
   padding: 10px;
   border: 1px solid var(--color-border);
   
@@ -15,3 +14,18 @@
   transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%);
 }
+
+.s {
+  max-width: 350px;
+}
+
+.m {
+  max-width: 800px;
+}
+
+.card svg {
+  width: 100%;
+  height: auto;
+}
+
+
