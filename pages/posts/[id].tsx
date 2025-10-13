@@ -10,6 +10,8 @@ import axios from 'axios';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import type { JSX } from 'react';
 import { Reviews } from '@/components/Reviews/Reviews';
+import { Input } from '@/components/Input/Input';
+import { ReviewsForm } from '@/components/ReviewForm/ReviewsForm';
 
 
 interface PostPageProps extends IAppContext {
@@ -30,6 +32,7 @@ function PostPage (props: PostPageProps):JSX.Element {
         <Like size="m" />
         <Htag tag="h1">Коментарии</Htag>
         <Reviews reviews={reviews} />
+        <ReviewsForm />
       </div>
     );
 
