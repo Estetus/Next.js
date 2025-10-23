@@ -1,0 +1,33 @@
+.input {
+  width: 100%;
+  padding: 18px 29px;
+  border: 1px solid #28282829;
+  border-radius: 8px;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+
+  background: white;
+
+}
+
+
+.inputWrapper {
+  position: relative;
+}
+
+.input ::placeholder {
+  color:#4E5D7C80;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.errorMessage {
+  position: absolute;
+  top: 18px;
+  right: 386px;
+  color: red;
+}

@@ -15,6 +15,7 @@
 
   width: 48px;
   height: 48px;
+  margin-left: 15px;
   padding: 15px;
   border: 1px solid var(--blackbutton);
   border-radius: 40px;
@@ -40,6 +41,11 @@
 .likebutton:hover svg path {
   stroke: var(--background);
   transition: all .3s ease-in-out;
+}
+
+.liketext {
+  margin-bottom: 47px;
+  font-size: 16px;
 }
 
 

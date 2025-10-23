@@ -1,5 +1,6 @@
 .h1 {
   margin: 0;
+  margin-bottom: 13px;
 
   font-size: 34px;
   font-weight: 700;
@@ -10,7 +11,7 @@
 
 .h2 {
   margin: 0;
-
+  margin-bottom: 20px;
   font-size: 28px;
   font-weight: 700;
   font-style: normal;

@@ -22,8 +22,18 @@ export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Ele
           <TimeTag>1 месяц назад</TimeTag>
         </div>
       )}
+      {size == 'm' && (
+        <div className={styles.text}>
+          Front-end
+          <DotIcon />
+          <TimeTag>1 месяц назад</TimeTag>
+          <DotIcon />
+          <span>3 минуты</span>
+          <DotIcon />
+          <Like size="s"> 4</Like>
+        </div>
+      )}
       {children}
-      <Like size='s'> 4</Like >
     </div>
   );
 }; 

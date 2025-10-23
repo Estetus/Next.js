@@ -27,12 +27,17 @@ export const Like = ({ children, size, isLiked= false, ...props }: LikeProps): J
       </button>);
     case 'm':
       return (
-        <button className={cn(styles.likebutton, {
-            [styles.liked]: liked
-        })} 
-        onClick={handleClick}>
-          <LikeIcon />
-        </button>
+        <div className={styles.liketext}>
+          Понравилось? Жми
+          <button
+            className={cn(styles.likebutton, {
+              [styles.liked]: liked,
+            })}
+            onClick={handleClick}
+          >
+            <LikeIcon />
+          </button>
+        </div>
       );
       default :
        return null;
