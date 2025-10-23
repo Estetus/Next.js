@@ -1,8 +1,26 @@
-.input, .textarea {
+.input,
+.textarea {
   max-width: 643px;
 }
 
 .textarea {
-  margin-top: 15px ;
+  margin-top: 15px;
   margin-bottom: 24px;
+}
+
+.form {
+  position: relative;
+}
+
+.successTitle {
+  font-weight: bold;
+}
+
+.success {
+  padding-top: 20px;
+  position: absolute;
+  border-radius: 5px;
+  right: 10px;
+  bottom: -99px;
+
 }

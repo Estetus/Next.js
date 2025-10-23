@@ -4,36 +4,63 @@ import { withLayout } from '@/Layout/HOCLayout';
 import { type GetStaticProps } from 'next';
 import axios from 'axios';
 import { type Post } from '@/interfaces/posts.interface';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
+function Home({ posts, gitUrl }: HomeProps): JSX.Element {
+  const router = useRouter();
 
-function Home({posts, gitUrl}: HomeProps): JSX.Element {
+  const handleCardClick = (id: number) => {
+    router.push(`/posts/${id}`);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent, id: number) => {
+    if (e.code === 'Enter' || e.code === 'Space') {
+      e.preventDefault();
+      router.push(`/posts/${id}`);
+    }
+  };
 
   return (
-    <> 
-      { posts.map((p) => (
-        <Link key={p.id} href={`/posts/${p.id}`}>
-        <Card size='s'>
-          {p.title}
-          {p.body}
-        </Card>
-        </Link>
-      ))
-      }
+    <>
+      {posts.map((p, index) => (
+        <motion.div
+          key={p.id}
+          role="article"
+          tabIndex={0}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: index * 0.1,
+          }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={() => handleCardClick(p.id)}
+          onKeyDown={(e) => handleKeyDown(e, p.id)}
+          aria-label="Карточка поста. Нажмите что бы открыть"
+        >
+          <Card size="s">
+            {p.title}
+            {p.body}
+          </Card>
+        </motion.div>
+      ))}
     </>
   );
 }
 
-
 export default withLayout(Home);
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-   const { data: posts } = await axios.get<Post[]>(`${process.env.NEXT_PUBLIC_DOMAIN}/posts`);
-    
+  const { data: posts } = await axios.get<Post[]>(
+    `${process.env.NEXT_PUBLIC_DOMAIN}/posts`
+  );
+
   return {
     props: {
       posts: posts.slice(0, 10),
-      gitUrl: 'https://github.com/Estetus/'
+      gitUrl: 'https://github.com/Estetus/',
     },
   };
 };

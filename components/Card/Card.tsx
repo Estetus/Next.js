@@ -4,7 +4,11 @@ import Picture from './picture.svg';
 import styles from './Card.module.css';
 import cn from 'classnames';
 
-export const Card = ({ children,  size = 's', ...props }: CardProps): JSX.Element => {
+export const Card = ({
+  children,
+  size = 's',
+  ...props
+}: CardProps): JSX.Element => {
   return (
     <div
       className={cn(styles.card, {
@@ -13,8 +17,7 @@ export const Card = ({ children,  size = 's', ...props }: CardProps): JSX.Elemen
       })}
       {...props}
     >
-      
-      <Picture  className='picture'/>
+      <Picture className="picture" aria-label="фото карточки" tabIndex={0} />
       {children}
     </div>
   );
