@@ -9,9 +9,9 @@ export const withLayout = <T extends Record<string, unknown>>(
   return function withLayoutComponent(props: T & IAppContext): JSX.Element {
     return (
       <AppContextProvider gitUrl={props.gitUrl}>
-      <Layout>
-        <Component {...props} />
-      </Layout>
+        <Layout>
+          <Component {...props} />
+        </Layout>
       </AppContextProvider>
     );
   };
