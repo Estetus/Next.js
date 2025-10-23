@@ -5,7 +5,7 @@
   padding: 0 20px;
 }
 
-.body, .card{
+.body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 33px;
