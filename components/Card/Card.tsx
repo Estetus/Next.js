@@ -14,7 +14,7 @@ export const Card = ({ children,  size = 's', ...props }: CardProps): JSX.Elemen
       {...props}
     >
       
-      <Picture  className='picture'/>
+      <Picture  className='picture' aria-label='фото карточки' tabIndex={0}/>
       {children}
     </div>
   );

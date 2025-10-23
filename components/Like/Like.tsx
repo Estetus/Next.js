@@ -18,13 +18,19 @@ export const Like = ({ children, size, isLiked= false, ...props }: LikeProps): J
     }
   };
 
+   const getAriaLabel = () => {
+     return liked
+       ? 'Лайк поставлен. Нажмите чтобы убрать лайк'
+       : 'Кнопка лайка. Лайк не поставлен. Нажмите чтобы поставить лайк';
+   };
+
   const renderIcon = () => {
   switch(size) {
     case 's':
       return  (
-      <button className={styles.button}>
+      <div className={styles.button} tabIndex={-1}>
         <LikeSmallIcon />
-      </button>);
+      </div>);
     case 'm':
       return (
         <div className={styles.liketext}>
@@ -34,6 +40,9 @@ export const Like = ({ children, size, isLiked= false, ...props }: LikeProps): J
               [styles.liked]: liked,
             })}
             onClick={handleClick}
+            aria-label={getAriaLabel()}
+            tabIndex={0}
+            aria-pressed={liked}
           >
             <LikeIcon />
           </button>

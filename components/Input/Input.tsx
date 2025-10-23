@@ -9,10 +9,12 @@ import styles from './Input.module.css';
 export const Input = forwardRef(({ error, className, ...props }: InputProps, ref:ForwardedRef<HTMLInputElement>): JSX.Element => {
   return (
     <div className={cn(styles.inputWrapper )}>
-      <input type="text" className={cn(styles.input,className, {
+      <input 
+      type="text" 
+      className={cn(styles.input,className, {
         [styles.error]: error
       })} ref={ref} {...props} />
-      {error && <span className={styles.errorMessage}>{error?.message}</span>}
+      {error && <span role='alert' className={styles.errorMessage}>{error?.message}</span>}
     </div>
   );
 });

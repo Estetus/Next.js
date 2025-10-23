@@ -4,20 +4,40 @@ import { withLayout } from '@/Layout/HOCLayout';
 import { type GetStaticProps } from 'next';
 import axios from 'axios';
 import { type Post } from '@/interfaces/posts.interface';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 
 function Home({posts, gitUrl}: HomeProps): JSX.Element {
+  const router = useRouter();
+
+  const handleCardClick = (id:number) => {
+    router.push(`/posts/${id}`);
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent, id: number) => {
+    if (e.code === 'Enter' || e.code === 'Space') {
+      e.preventDefault();
+      router.push(`/posts/${id}`);
+    }
+  };
 
   return (
     <> 
       { posts.map((p) => (
-        <Link key={p.id} href={`/posts/${p.id}`}>
+        <div key={p.id}
+        role='article'
+        tabIndex={0}
+        onClick={() => handleCardClick(p.id)}
+        onKeyDown={(e) => handleKeyDown(e, p.id)}
+        aria-label='Карточка поста. Нажмите что бы открыть'
+        >
         <Card size='s'>
           {p.title}
           {p.body}
         </Card>
-        </Link>
+        </div>
+        
+    
       ))
       }
     </>

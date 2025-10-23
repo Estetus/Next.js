@@ -13,7 +13,11 @@ export const TextArea = ({ error, className, ...props }: TextAreaProps): JSX.Ele
         })}
         {...props}
       />
-      {error && <span className={styles.errorMessage}>{error?.message}</span>}
+      {error && (
+        <span role="alert" className={styles.errorMessage}>
+          {error?.message}
+        </span>
+      )}
     </div>
   );
 };
