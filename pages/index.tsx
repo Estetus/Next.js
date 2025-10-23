@@ -5,6 +5,7 @@ import { type GetStaticProps } from 'next';
 import axios from 'axios';
 import { type Post } from '@/interfaces/posts.interface';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 
 function Home({posts, gitUrl}: HomeProps): JSX.Element {
@@ -22,24 +23,30 @@ function Home({posts, gitUrl}: HomeProps): JSX.Element {
   };
 
   return (
-    <> 
-      { posts.map((p) => (
-        <div key={p.id}
-        role='article'
-        tabIndex={0}
-        onClick={() => handleCardClick(p.id)}
-        onKeyDown={(e) => handleKeyDown(e, p.id)}
-        aria-label='Карточка поста. Нажмите что бы открыть'
+    <>
+      {posts.map((p,index) => (
+        <motion.div
+          key={p.id}
+          role="article"
+          tabIndex={0}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: index * 0.1,
+          }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={() => handleCardClick(p.id)}
+          onKeyDown={(e) => handleKeyDown(e, p.id)}
+          aria-label="Карточка поста. Нажмите что бы открыть"
         >
-        <Card size='s'>
-          {p.title}
-          {p.body}
-        </Card>
-        </div>
-        
-    
-      ))
-      }
+          <Card size="s">
+            {p.title}
+            {p.body}
+          </Card>
+        </motion.div>
+      ))}
     </>
   );
 }

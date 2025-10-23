@@ -5,7 +5,7 @@
   padding: 0 20px;
 }
 
-.body {
+.body .card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 33px;
@@ -13,12 +13,6 @@
   
 }
 
-
-/* @media (max-width:1080px) {
-  .body {
-    grid-template-columns: repeat(2, 350px);
-  }
-} */
 
 @media (max-width: 768px) {
   .body {

@@ -7,6 +7,7 @@ import DotIcon from './dot.svg';
 export const Reviews = ({ reviews }: ReviewsProps): JSX.Element => {
   return (
     <div>
+      {!reviews && <div>Отзывов нет</div>}
       {reviews?.map((r) => (
         <div className={styles.reviews} key={r.id}>
           <div>
