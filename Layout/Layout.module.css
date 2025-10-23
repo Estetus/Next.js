@@ -14,12 +14,6 @@
 }
 
 
-/* @media (max-width:1080px) {
-  .body {
-    grid-template-columns: repeat(2, 350px);
-  }
-} */
-
 @media (max-width: 768px) {
   .body {
     grid-template-columns: 1fr;
