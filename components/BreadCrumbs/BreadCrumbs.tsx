@@ -3,8 +3,9 @@ import { type BreadCrumbsProps } from './BreadCrumbs.props';
 import { Like } from '../Like';
 import { TimeTag } from '../TimeTag';
 import DotIcon from './dot.svg';
-import styles from './BreadCrumbs.module.css';
 import cn from 'classnames';
+import styles from './BreadCrumbs.module.css';
+
 
 export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Element => {
   return (
@@ -21,8 +22,18 @@ export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Ele
           <TimeTag>1 месяц назад</TimeTag>
         </div>
       )}
+      {size == 'm' && (
+        <div className={styles.text}>
+          Front-end
+          <DotIcon />
+          <TimeTag>1 месяц назад</TimeTag>
+          <DotIcon />
+          <span>3 минуты</span>
+          <DotIcon />
+          <Like size="s"> 4</Like>
+        </div>
+      )}
       {children}
-      <Like size='s'> 4</Like >
     </div>
   );
 }; 
