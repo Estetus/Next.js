@@ -2,6 +2,7 @@ import { type JSX } from 'react';
 import { type BreadCrumbsProps } from './BreadCrumbs.props';
 import { Like } from '../Like';
 import { TimeTag } from '../TimeTag';
+import { formatTimeAgo } from '../../helpers/Intlformat';
 import DotIcon from './dot.svg';
 import cn from 'classnames';
 import styles from './BreadCrumbs.module.css';
@@ -19,14 +20,14 @@ export const BreadCrumbs = ({ children, size = 's' }: BreadCrumbsProps): JSX.Ele
         <div className={styles.text}>
           Front-end
           <DotIcon />
-          <TimeTag>1 месяц назад</TimeTag>
+          <TimeTag>{formatTimeAgo(new Date(2025, 8, 25))}</TimeTag>
         </div>
       )}
       {size == 'm' && (
         <div className={styles.text}>
           Front-end
           <DotIcon />
-          <TimeTag>1 месяц назад</TimeTag>
+          <TimeTag>{formatTimeAgo(new Date(2025, 8, 25))}</TimeTag>
           <DotIcon />
           <span>3 минуты</span>
           <DotIcon />

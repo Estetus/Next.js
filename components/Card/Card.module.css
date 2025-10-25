@@ -7,10 +7,18 @@
   border: 1px solid var(--color-border);
   
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .s {
   max-width: 350px;
+  display: flex;
+  gap: 15px;
+}
+
+.s button{
+  align-self: flex-end;
+  margin-top: auto;
 }
 
 .m {

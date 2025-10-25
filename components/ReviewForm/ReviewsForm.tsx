@@ -28,9 +28,19 @@ export const ReviewsForm = ({ ...props }: ReviewsProps): JSX.Element => {
   }, [isSuccess]);
 
   const onSubmit = (formData: IReviewForm) => {
-    setIsSuccess(true);
-    reset();
-    console.log(formData);
+    const data = true;
+    try {
+      if (data) {
+        console.log(formData);
+        setIsSuccess(true);
+        reset();
+      } else {
+        console.error('Ошибка обработки данных');
+      }
+    } catch(error) {
+      console.error('Ошибка', error);
+    }
+    
   };
 
   return (

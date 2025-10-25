@@ -6,6 +6,7 @@ import axios from 'axios';
 import { type Post } from '@/interfaces/posts.interface';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/Button/Button';
 
 function Home({ posts, gitUrl }: HomeProps): JSX.Element {
   const router = useRouter();
@@ -43,6 +44,7 @@ function Home({ posts, gitUrl }: HomeProps): JSX.Element {
           <Card size="s">
             {p.title}
             {p.body}
+            <Button appearance={'blue'} withIcon>Читать</Button>
           </Card>
         </motion.div>
       ))}
